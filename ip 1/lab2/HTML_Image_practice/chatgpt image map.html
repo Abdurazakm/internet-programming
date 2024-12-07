@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Map Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #0056b3;
+        }
+        figure {
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        figcaption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Interactive Image Map of Africa</h1>
+
+    <!-- Wrapping the image in a figure with a caption -->
+    <figure>
+        <img src="africa_map.jpg" alt="Map of Africa" usemap="#africa-map" style="max-width: 100%;">
+        <figcaption>Map of Africa with clickable countries.</figcaption>
+    </figure>
+
+    <!-- Defining the image map -->
+    <map name="africa-map">
+        <!-- Rectangle around Egypt -->
+        <area shape="rect" coords="430,50,490,100" href="https://en.wikipedia.org/wiki/Egypt" alt="Egypt" target="_blank">
+        <!-- Circle for South Africa -->
+        <area shape="circle" coords="400,400,40" href="https://en.wikipedia.org/wiki/South_Africa" alt="South Africa" target="_blank">
+        <!-- Polygon for Nigeria -->
+        <area shape="poly" coords="300,150,330,170,320,210,280,200,270,160" href="https://en.wikipedia.org/wiki/Nigeria" alt="Nigeria" target="_blank">
+    </map>
+
+    <!-- Navigation bar to switch between images -->
+    <nav>
+        <a href="image_Map_practice.html">Africa Map</a>
+        <a href="another_image_page.html">Another Image</a>
+        <a href="third_image_page.html">Third Image</a>
+    </nav>
+    <a href="https://google.com" target="_top">google</a>
+
+</body>
+</html>

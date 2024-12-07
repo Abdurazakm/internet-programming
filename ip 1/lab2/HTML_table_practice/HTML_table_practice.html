@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table Practice</title>
+</head>
+<body>
+    <h1>HTML Table Practice</h1>
+    <table border="1px">
+        <caption>Semester Course Lists for Software Engineering Students</caption>
+        <!-- Column Group -->
+        <colgroup>
+            <col span="3" style="background-color: orange;">
+            <col span="3" style="background-color: aqua;">
+            <col span="3" style="background-color: rgb(17, 246, 170);">
+            <col span="3" style="background-color:rgb(135, 12, 98);">
+            <col>
+        </colgroup>
+        <!-- Table Header -->
+        <tr>
+            <th rowspan="2">No.</th>
+            <th colspan="2">Personal Information</th>
+            <th colspan="3">Course Information</th>
+            <th colspan="3">Address</th>
+            <th rowspan="2">Date</th>
+        </tr>
+        <tr>
+            <th>Full Name</th>
+            <th>Gender</th>
+            <th>Course Name</th>
+            <th>Course Code</th>
+            <th>Marks</th>
+            <th>City</th>
+            <th>Subcity</th>
+            <th>Kebele</th>
+        </tr>
+        <!-- Table Rows -->
+        <tr>
+            <td>1</td>
+            <td>Arsema</td>
+            <td>F</td>
+            <td>Internet Programming - I</td>
+            <td>SWEng3018</td>
+            <td>90</td>
+            <td>AA</td>
+            <td>Kaliti</td>
+            <td>09</td>
+            <td rowspan="3">November 20, 2024</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Alan</td>
+            <td>M</td>
+            <td>Internet Programming - I</td>
+            <td>SWEng3018</td>
+            <td>86</td>
+            <td>AA</td>
+            <td>Kaliti</td>
+            <td>09</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Bayissa</td>
+            <td>M</td>
+            <td>Mobile Computing</td>
+            <td>SWEng3024</td>
+            <td>86</td>
+            <td>AA</td>
+            <td>Bole</td>
+            <td>03</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,181 @@
+/* Initialize a counter for the articles */
+main {
+    counter-reset: article-counter;
+}
+
+article {
+    counter-increment: article-counter;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 1.2rem;
+}
+
+/* Style the article with counter */
+article::before {
+    content: "Article " counter(article-counter) ": ";
+    font-weight: bold;
+    color: #555;
+}
+nav ul {
+  display: flex;
+  justify-content: right;
+}
+
+/*Activity 2: CSS Icons and Lists
+• Add icons (using a font library like FontAwesome or an SVG image) before each link in 
+the navigation bar.
+• Style the unordered lists in the articles with custom bullet points.*/
+/* Add FontAwesome Icons to Navigation Links */
+
+
+/* nav a::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: "\f015"; 
+    margin-right: 8px;
+}
+
+nav a:nth-child(2)::before {
+    content: "\f129"; 
+}
+
+nav a:nth-child(3)::before {
+    content: "\f2bc"; 
+} */
+.bullet {
+  list-style: none;
+  padding: 0;
+}
+
+/* .bullet {
+  content: "•";
+  color: teal;
+  margin-right: 5px;
+  
+} */
+
+/*Activity 3: CSS Variables
+• Define a few CSS variables for colors and font sizes.
+• Use these variables to style the header, navigation bar, and footer.*/
+:root {
+    --main-bg: rgb(240, 240, 246);
+    --accent-color: rgb(119, 119, 153);
+    --font-large: 2rem;
+    --font-small: 1rem;
+}
+
+header, footer {
+    background-color: var(--main-bg);
+    color: var(--accent-color);
+    text-align: center;
+    padding: 10px;
+}
+
+/*Activity 4: CSS Clip Property
+• Create a decorative shape in the header using the clip-path property.*/
+header {
+    clip-path: polygon(50% 0, 100% 0, 50% 100%, 0 50%);
+    background-color: var(--accent-color);
+    color: white;
+    padding: 20px;
+}
+
+/*Activity 5: nth-child Selector
+• Use the nth-child selector to style:
+o Every even list item with a different background color.
+o The first article with a unique border style.*/
+
+/* Alternate list item background colors */
+ul li:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Unique border for the first article */
+article:first-child {
+    border: 2px dashed var(--accent-color);
+}
+/*Activity 6: CSS Text Decoration and Effects
+• Style links with different text-decoration effects.
+• Create a hover effect that adds a text stroke and shadow.*/
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+  }
+  
+  a:hover {
+    text-shadow: 1px 1px 2px black;
+    -webkit-text-stroke: 1px white;
+  }
+  
+
+  /*Activity 7: Overflow and Alignment
+• Add a box with overflowing text.
+• Use CSS to add a scroll effect for the overflow.
+• Align the text to justify its content within the box.*/
+.scroll-box {
+    width: 300px;
+    height: 100px;
+    overflow-y: scroll;
+    text-align: justify;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  /*Activity 8: Descendant Selector and Object-Fit
+• Style the navigation links using the descendant selector (e.g., nav a).
+• Add an image in each article and use the object-fit property to ensure it fills the box 
+appropriately.*/
+nav a {
+    color: purple;
+    padding: 10px;
+    display: inline-block;
+    
+    
+  }
+  article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /*IV.Responsive Design
+Activity 9: Grid and Flexbox
+• Use CSS Grid to layout the articles in the main section for larger screens.
+• Switch to Flexbox for the same layout on smaller screens.*/
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    main {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  /*Activity 10: Media Queries
+• Add a media query to:
+o Change the navigation bar to a vertical layout for screens smaller than 600px.
+o Hide the images in articles for print media.*/
+@media (max-width: 600px) {
+    nav ul {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  @media print {
+    article img {
+      display: none;
+    }
+  }
+  
+  
+  
+  
+
+
+

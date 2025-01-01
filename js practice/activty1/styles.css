@@ -1,0 +1,42 @@
+body{
+    /* text-align: center; */
+    
+
+}
+h1{
+    text-align: center;
+
+}
+
+#calculator input{
+    display: grid;
+    margin: 20px auto;
+    padding: 20px;
+    
+}
+#calculator{
+    height: 400px;
+    width: 400px;
+    border: 1px gray solid;
+    border-radius: 8px;
+    margin: auto;
+    place-items: center;
+    background-color: #ebe9e9;
+
+    
+   
+
+}
+button{
+    border-radius: 8px;
+    background-color: rgb(32, 192, 32);
+    height: 40px;
+    width: 40px;
+    margin:10px
+}
+button:hover{
+    background-color: #fff;
+}
+/* #result{
+    
+} */

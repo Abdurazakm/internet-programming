@@ -1,0 +1,15 @@
+h1{
+    height: fit-content;
+    width: fit-content;
+    padding: 1%;
+    
+    
+}
+
+button{
+    background-color: rgb(187, 224, 223);
+    padding: 1%;
+}
+button:hover{
+    background-color: burlywood;
+}

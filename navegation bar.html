@@ -1,0 +1,155 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hamburger Menu</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">MyLogo</div>
+        <div class="menu-icon">☰</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Icon Toggle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* Hide the checkbox */
+    #menu-toggle {
+      display: none;
+    }
+
+    /* Menu icon container */
+    .menu-icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+      position: relative;
+      z-index: 2; /* Ensure it stays on top */
+    }
+
+    .menu-bar {
+      width: 100%;
+      height: 4px;
+      background-color: white;
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Top bar transformation */
+    #menu-toggle:checked + .menu-icon .menu-bar:nth-child(1) {
+      transform: rotate(45deg) translateY(8px);
+    }
+
+    /* Middle bar fades out */
+    #menu-toggle:checked + .menu-icon .menu-bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    /* Bottom bar transformation */
+    #menu-toggle:checked + .menu-icon .menu-bar:nth-child(3) {
+      transform: rotate(-45deg) translateY(-10px);
+    }
+
+    /* Navigation menu */
+    nav {
+      display: none;
+      position: absolute;
+      top: 100%; /* Position it below the header */
+      right: 20px;
+      background-color: #444;
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 1;
+    }
+
+    nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    /* Show menu when checkbox is checked */
+    #menu-toggle:checked + .menu-icon + nav {
+      display: block;
+    }
+    .bgi{
+      height: 300px;
+      width: 200px;
+      background-color:rebeccapurple;
+      background-image: url('client registration.png');
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">My Website</div>
+    
+    <!-- Hidden menu toggle checkbox -->
+    <input type="checkbox" id="menu-toggle">
+    
+    <!-- Menu icon -->
+    <label for="menu-toggle" class="menu-icon">
+      <div class="menu-bar"></div>
+      <div class="menu-bar"></div>
+      <div class="menu-bar"></div>
+    </label>
+    
+    <!-- Navigation menu -->
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Welcome to My Website</h1>
+    <p>This is the home page content. Click on the menu icon to explore!</p>
+    <div class="bgi"></div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+const person = { fname: "John", lname: "Doe", age: 25 };
+let text = "";
+
+for (let key in person) {
+    text += `${key}: ${person[key]}<br>`;
+}
+
+document.write(text);
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InnerText</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function validate() {
+        var password = document.myForm.userPass.value;
+        var message = password.length > 5 ? "Good" : "Poor";
+        document.getElementById("passwordStrength").innerText = message;
+      }
+    </script>
+    <form name="myForm">
+      Password: <input type="password" name="userPass" onkeyup="validate()" />
+      <span id="passwordStrength">No Strength</span>
+    </form>
+  </body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function validate() {
+      var msg; 
+      if(document.myForm.userPass.value.length>5){
+      msg="good";
+      } else{ msg="poor"; }
+      document.getElementById('mylocation').innerText=msg;
+      }
+    </script>
+    <form name="myForm">
+      <input type="password" value="" name="userPass" onkeyup="validate()" />
+      Strength:<span id="mylocation">no strength</span>
+    </form>
+  </body>
+</html> -->

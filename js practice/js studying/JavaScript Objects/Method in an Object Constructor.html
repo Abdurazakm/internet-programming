@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function Employee(id, name, salary) {
+    this.id = id;
+    this.name = name;
+    this.salary = salary;
+
+    // Adding a method to change the salary
+    this.changeSalary = function(newSalary) {
+        this.salary = newSalary;
+    };
+}
+
+const emp = new Employee(103, "Sonoo Jaiswal", 30000);
+document.write(`ID: ${emp.id}, Name: ${emp.name}, Salary: ${emp.salary}<br>`);
+
+// Changing the salary using the method
+emp.changeSalary(45000);
+document.write(`After Change -> ID: ${emp.id}, Name: ${emp.name}, Salary: ${emp.salary}`);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+let fruits = ["Apple", "Banana", "Cherry"];
+
+// Using push() to add an element
+fruits.push("Orange");
+document.write("After push: " + fruits + "<br>");
+
+// Using pop() to remove the last element
+fruits.pop();
+document.write("After pop: " + fruits + "<br>");
+
+// Using slice() to copy part of the array
+let slicedFruits = fruits.slice(0, 2);
+document.write("Sliced: " + slicedFruits + "<br>");
+
+// Using concat() to merge arrays
+let moreFruits = ["Mango", "Pineapple"];
+let allFruits = fruits.concat(moreFruits);
+document.write("Concatenated: " + allFruits + "<br>");
+</script>
+</body>
+</html>

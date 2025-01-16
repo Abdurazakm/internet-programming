@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>date</title>
+  </head>
+  <body>
+    Current Date and Time: <span id="txt"></span>
+    <script>
+      var today = new Date();
+      document.getElementById("txt").innerHTML = today;
+
+      var date = new Date();
+      var day = date.getDate();
+      var month = date.getMonth() + 1; // Month is 0-indexed
+      var year = date.getFullYear();
+      document.write("Date is: " + day + "/" + month + "/" + year);
+    </script>
+  </body>
+</html>
